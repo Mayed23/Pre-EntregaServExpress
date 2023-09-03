@@ -20,7 +20,7 @@ export default class ProductManager {
 
     }
 
-    getProducts = async () => {
+    async getProducts () {
         return await this.readProducts()
     }
 
@@ -85,9 +85,9 @@ export default class ProductManager {
 const products = new ProductManager()
 
 //devuelve el array vacío, antes de agregar productos o los existentes
-// products.getProducts()
-//     .then(res => console.log(res))
-//     .catch(err => console.log(err))
+products.getProducts()
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
 
 
  const respto = (
@@ -106,19 +106,19 @@ const products = new ProductManager()
 )
 
 
-//  products.addProducts(respto)
-//      .then(res => console.log(res))
-//      .catch(err => console.log(err))
+ products.addProducts(respto)
+     .then(res => console.log(res))
+     .catch(err => console.log(err))
 
-// // products.getProductsById(5)
-// // .then(res => console.log(res))
-// // .catch(err => console.log(err))
+products.getProductsById(5)
+.then(res => console.log(res))
+.catch(err => console.log(err))
 
-// //  products.deleteProductsById(3)
+ products.deleteProductsById()
 
-// products.updateProducts({
-//     name: `KIT Bomba de Gasolina`, model: `Aveo`, price: 12, img: `img1`, code: `1230`, idcategory: `1`, stock: `15` 
-// })
+products.updateProducts({
+    name: `KIT Bomba de Gasolina`, model: `Aveo`, price: 12, img: `img1`, code: `1230`, idcategory: `1`, stock: `15` 
+})
 
 
 
